@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './Button.module.css';
 
 function HomePage({ posts }) {
   console.log(posts)
@@ -11,6 +12,12 @@ function HomePage({ posts }) {
         <a>Next 에서 제공하는 Link 라이브러리</a>
       </Link>
       <hr />
+      <button
+                type="button"
+                className={styles.error}
+            >
+                Destory
+            </button>
       <ul>
         {posts.map(post => (
           <li key={post.id}>
